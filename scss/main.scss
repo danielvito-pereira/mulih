@@ -152,7 +152,14 @@
         gap: 16px;
         display: flex;
         flex-flow: column nowrap;
-
+        .li{
+          .a{
+            transition: all .5s  ease-in-out;
+            &:hover{
+              color: #0B2E29;
+            }
+          }
+        }
       }
       .newsletter{
         display: flex;
