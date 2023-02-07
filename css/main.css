@@ -109,7 +109,15 @@ body {
 .header {
   width: 100%;
   height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-between;
   background: #F5F5F5;
+  background-image: url(../img/bernard-hermant-KqOLr8OiQLU-unsplash\ 1.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: contain;
 }
 .header .nav {
   width: 100%;
@@ -181,6 +189,45 @@ body {
 .header .nav .navigation .buttons .-verde:hover {
   background-color: #F5F5F5;
   color: #69B99D;
+}
+.header .text {
+  width: 90%;
+  max-width: 1192px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .text .title {
+  width: 50%;
+}
+.header .text .title .h1 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 74px;
+  /* or 116% */
+  letter-spacing: 0.0025em;
+  /* Tittle */
+  color: #1F2744;
+}
+.header .text .title .p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 150% */
+  letter-spacing: 0.0025em;
+  color: #73788C;
+}
+.header .epc {
+  background-color: rgb(0, 255, 221);
+  width: 751px;
+  height: 180px;
+  left: 124px;
+  top: 518px;
 }
 
 /*# sourceMappingURL=main.css.map */
