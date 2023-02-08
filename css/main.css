@@ -331,9 +331,6 @@ body {
   padding: 1em;
   border: 1px solid #DEDCDA;
 }
-.section .container .hotels .hotel .img {
-  background-color: #1F2744;
-}
 .section .container .hotels .hotel .cta {
   width: 100%;
   display: flex;
@@ -380,6 +377,61 @@ body {
   padding: 4px 8px;
   gap: 8px;
   background: #F5F5F5;
+}
+.section .container .hotels .people {
+  max-width: 376px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+}
+.section .container .hotels .people .values {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.section .container .hotels .people .values img {
+  width: auto;
+}
+.section .container .hotels .people .values .cargo {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.section .container .hotels .people .cta {
+  gap: 20px;
+}
+.section .container .hotels .people .cta .p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 150% */
+  letter-spacing: 0.0025em;
+  /* Tittle */
+  color: #1F2744;
+}
+.section .container .hotels .people .cta .values .cargo h3 {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  /* identical to box height, or 162% */
+  letter-spacing: 0.5px;
+  color: #0B2E29;
+}
+.section .container .hotels .people .cta .values .cargo p {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  /* identical to box height, or 183% */
+  letter-spacing: 0.5px;
+  color: #767676;
 }
 
 .tverde {
