@@ -88,9 +88,10 @@
     width: 90%;
     max-width: 120rem;
     display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
+    flex-flow: column nowrap;
+    align-items: flex-start;
     justify-content: space-between;
+    gap: .825rem;
     .title{
       width: 50%;
       .h1{
@@ -127,6 +128,165 @@
     width: 751px;
     height: 180px;
   }
+}
+.btn{
+  cursor: pointer;
+  padding: 16px 48px 15px;
+  color:#69B99D;
+  border: solid 1px #F5F5F5;
+  transition: all .5s ease;
+  &:hover{
+    border: solid 1px #69B99D;
+    box-shadow: 0px 0px 20px rgba(105, 185, 157, 0.58);
+  }
+}
+.-verde{
+  background: #69B99D;
+  color: white;
+  &:hover{
+    background-color: #F5F5F5;
+    color:#69B99D;
+   
+  }
+}
+.-inverso{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  border: solid 1px #69B99D;
+  padding: 12px auto;
+  gap: 8px;
+  &:hover{
+    background: #69B99D;
+    color: white;
+    border: solid 1px #69B99D;
+    box-shadow: 0px 0px 20px rgba(105, 185, 157, 0.58);
+  }
+}
+.section{
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  .container{
+    width: 90%;
+    max-width: 120rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    .t{
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: flex-start;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 3em;
+      .sub{
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 56px;
+        letter-spacing: 0.5px;
+        color: #054457;
+      }
+      .subsection{
+        width: 100%;
+        max-width: 120rem;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        .p{
+          font-family: 'Poppins';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 26px;
+          letter-spacing: 0.0025em;
+          color: #73788C;
+        }
+      }
+    }
+    .hotels{
+      width: 100%;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3.125rem;
+      .hotel{
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1em;
+        border: 1px solid #DEDCDA;
+        .img{
+          background-color: #1F2744;
+        }
+        .cta{
+          width: 100%;
+          display: flex;
+          flex-flow: column nowrap;
+          gap: 1rem;
+          .h2{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 32px;
+            letter-spacing: 0.0025em;
+            color: #1F2744;
+          }
+          .p{
+              font-family: 'Poppins';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 26px;
+              letter-spacing: 0.0025em;
+              color: #A6A6A6;
+          }
+          .values{
+            display: flex;
+            flex-flow: row nowrap;
+            gap: .625rem;
+            .value{
+              font-family: 'Poppins';
+              font-style: normal;
+              font-weight: 600;
+              font-size: 24px;
+              line-height: 32px;
+              letter-spacing: 0.0025em;
+
+              color: #69B99D;
+            }
+            .frame{
+              display: flex;
+              flex-flow: row nowrap;
+
+              justify-content: center;
+              align-items: center;
+              padding: 4px 8px;
+              gap: 8px;
+              background: #F5F5F5;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.tverde{
+  padding: 12px 24px;
+  gap: .625rem;
+  background: #F8F9FE;
+  color: #69B99D;
+
 }
 
 .footer {
