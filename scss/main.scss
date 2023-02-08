@@ -344,7 +344,56 @@
         }
       }
     }
+    .content{
+      padding: 1em;
+      .cards{
+        display: flex;
+        gap: 3.2rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .card{
+          display: flex;
+          flex-flow: column nowrap;
+          width: 30%;
+          gap: 1rem;
+          padding: 2.4rem;
+          text-align: left;
+          border: 1px solid var(--brand-light);
+          border-radius: 0.6rem;
+          .h3{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 38px;
+            /* identical to box height, or 136% */
+
+            letter-spacing: 0.5px;
+
+            color: #054457;
+          }
+          .p{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            /* or 162% */
+
+            letter-spacing: 0.5px;
+
+            color: #73788C;
+          }
+
+        }
+      }
+
+    }
   }
+}
+.advante{
+  max-height: 59.625rem;
+  background: #F5F5F5;
 }
 .tverde{
   padding: 12px 24px;
