@@ -1,5 +1,4 @@
 @import 'reset/variaveis' , 'reset/mixins' , 'reset/reset' ,'reset/keyframes';
-
 .header{
   width: 100%;
   height: 100vh;
@@ -12,73 +11,75 @@
   background-repeat: no-repeat;
   background-position: bottom right;
   background-size: contain;
-  .nav{
+  .nav{/*quando o botão não estiver ativo */
     width: 100%;
-    display: flex;
+    /* display: none;*/
+    overflow: hidden;
+
+    transition: all .5s ease-in-out;
+    display:flex;
+    flex-flow: row nowrap;
     align-items: center;
-    justify-content: center;
-    padding: 1em;
-    .navigation{
-      width: 90%;
-      max-width: 120rem;
-      height: 55px;
+    justify-content: flex-end;
+    gap: 25%;
+    .activo{/*quando o botão estiver ativo */
+      /*para suavizar o efeito apenas retirei a altura e depois adicionei com um transition */
+      /*display: block;*/
+      height: 50vh;
+      pointer-events: auto;
+    }
+    .logo{
+      display: flex;
+    }
+    .ul{
       display: flex;
       flex-flow: row nowrap;
       align-items: center;
-      justify-content: space-between;
-      .logo{
+      justify-content: center;
+      gap: 20px;
+      transition: all .5s ease;
+      .a{
         display: flex;
-      }
-      .ul{
-        display: flex;
-        flex-flow: row nowrap;
+        flex-flow: column-reverse nowrap;
         align-items: center;
-        justify-content: center;
-        gap: 20px;
-        transition: all .5s ease;
-        .a{
-          display: flex;
-          flex-flow: column-reverse nowrap;
-          align-items: center;
-          font-weight: 500;
-          font-size: 18px;
-          line-height: 26px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 26px;
+        transition: all .5s  ease-in-out;
+        &:hover{
+          color:#69B99D;
           transition: all .5s  ease-in-out;
-          &:hover{
-            color:#69B99D;
-            transition: all .5s  ease-in-out;
-            &::before{
-              content:"";
-              width: 6px;
-              height: 6px;
-              background: #69B99D;
-              border-radius: 50%;
-              margin-top: 1em;
-            }
+          &::before{
+            content:"";
+            width: 6px;
+            height: 6px;
+            background: #69B99D;
+            border-radius: 50%;
+            margin-top: 1em;
           }
         }
       }
-      .buttons{
-        display: flex;
-        flex-flow: row nowrap;
-        gap: 30px;
-        .btn{
-          cursor: pointer;
-          padding: 16px 48px 15px;
-          color:#69B99D;
-          border: solid 1px #F5F5F5;
-          transition: all .5s ease;
-          &:hover{
-            border: solid 1px #69B99D;
-          }
+    }
+    .buttons{
+      display: flex;
+      flex-flow: row nowrap;
+      gap: 30px;
+      .btn{
+        cursor: pointer;
+        padding: 16px 48px 15px;
+        color:#69B99D;
+        border: solid 1px #F5F5F5;
+        transition: all .5s ease;
+        &:hover{
+          border: solid 1px #69B99D;
         }
-        .-verde{
-          background: #69B99D;
-          color: white;
-          &:hover{
-            background-color: #F5F5F5;
-            color:#69B99D;
-          }
+      }
+      .-verde{
+        background: #69B99D;
+        color: white;
+        &:hover{
+          background-color: #F5F5F5;
+          color:#69B99D;
         }
       }
     }
@@ -183,6 +184,17 @@
         }
       }
     }
+  }
+}
+.navigation{
+  width: 90%;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+     .button{
+    display: none;
+    cursor: pointer;
   }
 }
 .btn{
@@ -713,6 +725,58 @@
     .tit{
       color: #0B2E29;
     }
+  }
+}
+@media screen and (max-width:1000px){
+
+  .header .nav.activo{/*quando o botão estiver ativo */
+    /*para suavizar o efeito apenas retirei a altura e depois adicionei com um transition */
+    /*display: block;*/
+    height: 90vh;
+    pointer-events: auto;
+    .ul{
+      flex-direction: column;
+    }
+  }
+
+  .header .li{
+    margin: 1em 0;
+  }
+  .navigation .button {
+    display: block; 
+    cursor: pointer;
+}
+  .nav{
+    height: 0vh;
+  }
+  .navigation {
+    width:auto;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .wrapper{
+    width: 95%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header .nav {
+    width: 100%;
+    /* display: none; */
+    overflow: hidden;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    /* gap: 25%; */
+    flex-direction: column;
   }
 }
 @media(max-width:1000px) {

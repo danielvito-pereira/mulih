@@ -119,26 +119,27 @@ body {
   background-position: bottom right;
   background-size: contain;
 }
-.header .nav {
+.header .nav { /*quando o botão não estiver ativo */
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1em;
-}
-.header .nav .navigation {
-  width: 90%;
-  max-width: 120rem;
-  height: 55px;
+  /* display: none;*/
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
+  gap: 25%;
 }
-.header .nav .navigation .logo {
+.header .nav .activo { /*quando o botão estiver ativo */
+  /*para suavizar o efeito apenas retirei a altura e depois adicionei com um transition */
+  /*display: block;*/
+  height: 50vh;
+  pointer-events: auto;
+}
+.header .nav .logo {
   display: flex;
 }
-.header .nav .navigation .ul {
+.header .nav .ul {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -146,7 +147,7 @@ body {
   gap: 20px;
   transition: all 0.5s ease;
 }
-.header .nav .navigation .ul .a {
+.header .nav .ul .a {
   display: flex;
   flex-flow: column-reverse nowrap;
   align-items: center;
@@ -155,11 +156,11 @@ body {
   line-height: 26px;
   transition: all 0.5s ease-in-out;
 }
-.header .nav .navigation .ul .a:hover {
+.header .nav .ul .a:hover {
   color: #69B99D;
   transition: all 0.5s ease-in-out;
 }
-.header .nav .navigation .ul .a:hover::before {
+.header .nav .ul .a:hover::before {
   content: "";
   width: 6px;
   height: 6px;
@@ -167,26 +168,26 @@ body {
   border-radius: 50%;
   margin-top: 1em;
 }
-.header .nav .navigation .buttons {
+.header .nav .buttons {
   display: flex;
   flex-flow: row nowrap;
   gap: 30px;
 }
-.header .nav .navigation .buttons .btn {
+.header .nav .buttons .btn {
   cursor: pointer;
   padding: 16px 48px 15px;
   color: #69B99D;
   border: solid 1px #F5F5F5;
   transition: all 0.5s ease;
 }
-.header .nav .navigation .buttons .btn:hover {
+.header .nav .buttons .btn:hover {
   border: solid 1px #69B99D;
 }
-.header .nav .navigation .buttons .-verde {
+.header .nav .buttons .-verde {
   background: #69B99D;
   color: white;
 }
-.header .nav .navigation .buttons .-verde:hover {
+.header .nav .buttons .-verde:hover {
   background-color: #F5F5F5;
   color: #69B99D;
 }
@@ -277,6 +278,18 @@ body {
   letter-spacing: 0.0025em;
   /* Tittle */
   color: #1F2744;
+}
+
+.navigation {
+  width: 90%;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navigation .button {
+  display: none;
+  cursor: pointer;
 }
 
 .btn {
@@ -774,6 +787,55 @@ body {
   color: #0B2E29;
 }
 
+@media screen and (max-width: 1000px) {
+  .header .nav.activo { /*quando o botão estiver ativo */
+    /*para suavizar o efeito apenas retirei a altura e depois adicionei com um transition */
+    /*display: block;*/
+    height: 90vh;
+    pointer-events: auto;
+  }
+  .header .nav.activo .ul {
+    flex-direction: column;
+  }
+  .header .li {
+    margin: 1em 0;
+  }
+  .navigation .button {
+    display: block;
+    cursor: pointer;
+  }
+  .nav {
+    height: 0vh;
+  }
+  .navigation {
+    width: auto;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .wrapper {
+    width: 95%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header .nav {
+    width: 100%;
+    /* display: none; */
+    overflow: hidden;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    /* gap: 25%; */
+    flex-direction: column;
+  }
+}
 @media (max-width: 1000px) {
   .header {
     height: auto;
